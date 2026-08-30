@@ -55,7 +55,7 @@ def subscribe():
             "success": True,
             "message": (
                 f"🎉 Successfully subscribed {sub['name']} (ID: {identifier})! "
-                f"You will receive your daily brief every morning at 8:00 AM."
+                f"You will receive your daily brief every morning at 7:00 AM."
             ),
             "subscriber": sub
         })

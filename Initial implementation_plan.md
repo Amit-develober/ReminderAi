@@ -8,7 +8,7 @@ Build a fully-automated, zero-cost **AI Smart Daily Briefing Bot** in Python tha
 
 ```mermaid
 graph TD
-    A[Trigger: GitHub Actions 8:00 AM Cron / Local Script] --> B[Data Fetchers]
+    A[Trigger: GitHub Actions 7:00 AM Cron / Local Script] --> B[Data Fetchers]
     B --> B1[Weather Fetcher: Open-Meteo API - No Key Needed]
     B --> B2[News & Reddit Fetcher: RSS / Reddit JSON - No Key Needed]
     B --> B3[Personal Calendar / To-Do Items]
@@ -72,7 +72,7 @@ Main entry point orchestrating the entire flow (fetching data $\rightarrow$ AI s
 ### Cloud Automation (24/7 Free)
 
 #### [NEW] [`.github/workflows/daily_briefing.yml`](file:///c:/Users/ad/OneDrive/Desktop/Test/.github/workflows/daily_briefing.yml)
-GitHub Actions workflow configured with a daily cron trigger (e.g. 02:30 UTC / 8:00 AM local) that runs the Python script in the cloud for 100% free without needing your PC to stay on.
+GitHub Actions workflow configured with a daily cron trigger (e.g. 02:30 UTC / 7:00 AM local) that runs the Python script in the cloud for 100% free without needing your PC to stay on.
 
 #### [NEW] [`README.md`](file:///c:/Users/ad/OneDrive/Desktop/Test/README.md)
 Complete step-by-step setup guide with screenshots/instructions for creating the Telegram Bot, getting the Chat ID, getting the Gemini API key, and setting up GitHub Secrets.

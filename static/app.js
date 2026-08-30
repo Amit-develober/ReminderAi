@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await resp.json();
 
       if (result.success) {
-        showToast(`✈️ Subscribed! Your daily Telegram brief arrives at <strong>8:00 AM</strong> every morning.`);
+        showToast(`✈️ Subscribed! Your daily Telegram brief arrives at <strong>7:00 AM</strong> every morning.`);
         fetchSubscribersCount();
       } else {
         showToast(result.error || "Failed to subscribe.", "error");
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch {
       showToast("Network error — could not reach the server.", "error");
     } finally {
-      setButtonLoading(btnSubscribe, false, `<span class="btn-icon">✈️</span><span>Subscribe — Get Daily Brief at 8:00 AM</span>`);
+      setButtonLoading(btnSubscribe, false, `<span class="btn-icon">✈️</span><span>Subscribe — Get Daily Brief at 7:00 AM</span>`);
     }
   });
 
