@@ -41,7 +41,7 @@ def generate_daily_briefing(
         community_text += f"{i}. [{item['source']}] {item['title']} ({item['summary']})\n   URL: {item['link']}\n"
 
     system_instruction = (
-        "You are an executive AI assistant creating an ultra-concise, bite-sized daily morning briefing for WhatsApp.\n"
+        "You are an executive AI assistant creating an ultra-concise, bite-sized daily morning briefing for Telegram.\n"
         "Rules:\n"
         "1. Keep it SHORT, punchy, and easy to skim in 20 seconds.\n"
         "2. Start with a 1-line greeting with the user's name and date.\n"
@@ -50,7 +50,7 @@ def generate_daily_briefing(
         "5. For each story: provide a bold title followed immediately by ONE crisp, informative sentence. (e.g. *• Google Slashes AI Token Usage:* New research shows 94% cost reduction for long-running agents.)\n"
         "6. STRICTLY DO NOT include ANY website links, URLs, or source links (no 'https://', no 'TechCrunch (http...)', etc.). Keep it 100% link-free.\n"
         "7. End with a 1-line inspiring thought for the day.\n"
-        "8. Use clean WhatsApp formatting (bold with *)."
+        "8. Use clean Telegram formatting (bold with *)."
     )
 
     prompt = f"""
@@ -70,7 +70,7 @@ Focus Interests: {', '.join(focus_topics)}
 --- TRENDING COMMUNITY DISCUSSIONS ---
 {community_text if community_text else "No community posts fetched."}
 
-Generate the short, link-free WhatsApp morning brief now:
+Generate the short, link-free Telegram morning brief now:
 """
 
     clean_key = (api_key or "").strip()
@@ -86,7 +86,7 @@ Generate the short, link-free WhatsApp morning brief now:
         )
         if response and response.text:
             text = response.text.strip()
-            # Normalize any double-asterisk bold to WhatsApp single-asterisk
+            # Normalize any double-asterisk bold to Telegram single-asterisk
             text = re.sub(r'\*\*(.*?)\*\*', r'*\1*', text)
             return text
         else:
